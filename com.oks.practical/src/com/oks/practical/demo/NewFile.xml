@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beanshttp://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="laptop_bean" class="com.oks.practical.in.Laptop"> <property name="lid" value="2"></property>
+<property name="id" value="intel "></property>
+<property name="name" value="500GB"></property>
+
+</bean>
+<bean id="person_bean" class="com.oks.practical.in.Person">
+<constructor-arg name="pid" value="1"></constructor-arg>
+<constructor-arg name="name" value="Parti Shivaji"></constructor-arg>
+
+</bean>
+</beans>
+
