@@ -4,20 +4,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 @Entity
 @Table
 public class Person {
 	
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	@SequenceGenerator(
-	name="person_sequence",sequenceName="person_sequence",allocationSize=1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "person_sequence")
-	protected  int pId;
-	protected String pName;
-	protected String eMail;
-	public Person(int pId, String pName, String eMail) {
+	private  long pId;
+	private String pName;
+	private String eMail;
+	public Person(long pId, String pName, String eMail) {
 		super();
 		this.pId = pId;
 		this.pName = pName;
@@ -25,12 +22,11 @@ public class Person {
 	}
 	public Person() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	public int getpId() {
+	public long getpId() {
 		return pId;
 	}
-	public void setpId(int pId) {
+	public void setpId(long pId) {
 		this.pId = pId;
 	}
 	public String getpName() {

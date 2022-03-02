@@ -16,25 +16,21 @@ public class PersonService {
 		super();
 		this.personrepo = personrepo;
 	}
-
-	public List<Person> getPersons(){
+	
+	public void add(Person person) {
+		personrepo.save(person);
+	}
+	public List<Person>show(){
 		return personrepo.findAll();
 	}
-
-	public Person save(Person person) {
-		// TODO Auto-generated method stub
-		return person;
+	public void update(Person person) {
+		personrepo.save(person);
 	}
-
 	
-	
-	
-	
-	
-	
-	
-
-	
+	public void delete(Person person) {
+		personrepo.delete(person);
+	}
+		
 	}
 
 	
